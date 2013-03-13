@@ -1,0 +1,31 @@
+#notype_prompt {
+	width: 100%;
+	padding: 10px;
+	border-top: 1px solid #bbb;
+	background: #efefef;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+
+#notype_prompt ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#notype_prompt ul li {
+	float: left;
+	margin-right: 10px;
+}
+
+#notype_prompt ul li span {
+	font-size: 20px;
+	margin-right: 3px;
+	color: #aaa;
+}
+
+#notpe_prompt .clear { 
+	clear: both;
+}
