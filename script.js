@@ -51,15 +51,25 @@ $(document).ready(function() {
 		} else if ((e.ctrlKey || e.metaKey) && e.altKey && e.which == 11) {
 			//cmd + alt + k (up)
 			var currentCursor = $(this).get(0).selectionStart;
-			var placeholder_index = $(this).val().indexOf("[notype_placeholder]", currentCursor + 1);
+			var placeholder_index = $(this).val().lastIndexOf("[notype_placeholder]", currentCursor - 1);
+			if(placeholder_index == -1) {
+				//see if we can loop backwards
+				placeholder_index = $(this).val().lastIndexOf("[notype_placeholder]");
+			}
+
 			if(placeholder_index != -1) {
 				$(this).setCursorPosition(placeholder_index, placeholder_index + 20);
-			}
+			} 
 			e.preventDefault();
 		} else if ((e.ctrlKey || e.metaKey) && e.altKey && e.which == 10) {
 			//cmd + alt + j (down)
 			var currentCursor = $(this).get(0).selectionStart;
-			var placeholder_index = $(this).val().lastIndexOf("[notype_placeholder]", currentCursor - 1);
+			var placeholder_index = $(this).val().indexOf("[notype_placeholder]", currentCursor + 1);
+			if(placeholder_index == -1) {
+				//see if we can loop backwards
+				placeholder_index = $(this).val().indexOf("[notype_placeholder]");
+			}
+
 			if(placeholder_index != -1) {
 				$(this).setCursorPosition(placeholder_index, placeholder_index + 20);
 			}
