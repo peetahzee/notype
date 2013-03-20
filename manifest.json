@@ -3,7 +3,7 @@
   "version": "0.1",
   "manifest_version": 2,
 
-  "description": "A plain text description",
+  "description": "For the lazy graders",
 
   "content_scripts": [
     {
